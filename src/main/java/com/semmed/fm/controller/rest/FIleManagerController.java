@@ -1,5 +1,6 @@
-package com.semmed.fm;
+package com.semmed.fm.controller.rest;
 
+import com.semmed.fm.service.FileStorageService;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;

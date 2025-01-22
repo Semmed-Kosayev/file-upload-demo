@@ -1,4 +1,4 @@
-package com.semmed.fm;
+package com.semmed.fm.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,7 +13,7 @@ import java.util.Objects;
 @Service
 public class FileStorageService {
 
-    private static final String STORAGE_DIRECTORY = "C:\\Users\\drago\\Documents\\Storage";
+    public static final String STORAGE_DIRECTORY = "C:\\Users\\drago\\Documents\\Storage";
 
     public void saveFile(MultipartFile fileToSave) throws IOException {
         if (fileToSave == null) {
