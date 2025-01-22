@@ -42,6 +42,7 @@ public class FIleManagerController {
 
     @GetMapping("/download")
     public ResponseEntity<Resource> downloadFile(@RequestParam("fileName") String fileName) {
+        logger.log(Level.INFO, "[NORMAL] Downloading file: " + fileName);
         try {
             File downloadFile = service.getDownloadFile(fileName);
             return ResponseEntity.ok()
@@ -58,6 +59,7 @@ public class FIleManagerController {
 
     @GetMapping("/download-faster")
     public ResponseEntity<Resource> downloadFileFaster(@RequestParam("fileName") String fileName) {
+        logger.log(Level.INFO, "[FASTER] Downloading file: " + fileName);
         try {
             File fileToDownload = service.getDownloadFile(fileName);
             return ResponseEntity.ok()
